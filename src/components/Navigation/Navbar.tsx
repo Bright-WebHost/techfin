@@ -45,7 +45,7 @@ export default function Navbar() {
             <Cctv size={24} />
           </div>
           <span className="text-2xl font-bold text-slate-900">
-            UltraCam<span className="text-red-600">.</span>
+            Techfin<span className="text-red-600">.</span>
           </span>
         </Link>
 
