@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-background text-textDark antialiased;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  @apply bg-primary/20 text-textDark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section-shell {
+  @apply rounded-[2rem] border border-slate-200/80 bg-white shadow-[0_20px_60px_rgba(26,58,74,0.08)];
+}
+
+.soft-panel {
+  @apply rounded-[2rem] border border-slate-200/70 bg-lightGray shadow-sm;
+}
