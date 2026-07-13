@@ -11,7 +11,7 @@ interface AnimatedButtonProps {
 export default function AnimatedButton({ href, children, variant = 'primary', className = '' }: AnimatedButtonProps) {
   const base = 'inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold transition duration-300';
   const styles = variant === 'primary'
-    ? 'bg-primary text-white hover:bg-red-600'
+    ? 'bg-primary text-white hover:bg-primary/90'
     : 'border border-primary text-primary hover:bg-primary hover:text-white';
 
   const content = (

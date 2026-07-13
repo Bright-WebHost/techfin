@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ArrowRight, Cctv, ChevronDown } from 'lucide-react';
+import { Menu, X, ArrowRight, ChevronDown } from 'lucide-react';
 
 type DropdownItem = {
   href: string;
@@ -23,11 +24,6 @@ const navItems: NavItem[] = [
   },
   { href: '/about', label: 'About Us' },
   { href: '/services', label: 'Services' },
-  { href: '/blog', label: 'Blog' },
-  { 
-    href: '/pages', 
-    label: 'Pages'
-  },
   { href: '/contact', label: 'Contact Us' }
 ];
 
@@ -37,16 +33,11 @@ export default function Navbar() {
 
   return (
     // Changed "absolute" to "fixed" here to make the navbar sticky
-    <header className="fixed left-0 right-0 top-0 z-50 px-4 pt-6 sm:px-6 lg:px-8">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full bg-white px-6 py-3 shadow-xl transition-all">
+    <header className="fixed left-0 right-0 top-0 z-50 px-3 pt-4 sm:px-6 sm:pt-6 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full bg-white px-4 py-3 shadow-xl transition-all sm:px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-white">
-            <Cctv size={24} />
-          </div>
-          <span className="text-2xl font-bold text-slate-900">
-            Techfin<span className="text-red-600">.</span>
-          </span>
+          <Image src="/images/logo.png" alt="TechFin Enterprises" width={176} height={72} className="h-11 w-auto sm:h-12" priority />
         </Link>
 
         {/* Desktop Links */}
@@ -60,13 +51,13 @@ export default function Navbar() {
             >
               <Link 
                 href={item.href} 
-                className="group flex items-center gap-1 py-4 text-sm font-semibold text-slate-700 transition hover:text-red-600"
+                className="group flex items-center gap-1 py-4 text-sm font-semibold text-slate-700 transition hover:text-primary"
               >
                 {item.label}
                 {item.dropdown && (
                   <ChevronDown 
                     size={14} 
-                    className={`transition-transform duration-300 ${activeDropdown === item.label ? 'rotate-180 text-red-600' : ''}`} 
+                    className={`transition-transform duration-300 ${activeDropdown === item.label ? 'rotate-180 text-primary' : ''}`} 
                   />
                 )}
               </Link>
@@ -86,7 +77,7 @@ export default function Navbar() {
                         <Link
                           key={dropItem.label}
                           href={dropItem.href}
-                          className="block rounded-lg px-4 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-red-600"
+                          className="block rounded-lg px-4 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-primary"
                         >
                           {dropItem.label}
                         </Link>
@@ -103,7 +94,7 @@ export default function Navbar() {
         <div className="hidden lg:block">
           <Link 
             href="/quote" 
-            className="flex items-center gap-2 rounded-full bg-red-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-red-700 hover:shadow-lg hover:shadow-red-600/30"
+            className="flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary/90 hover:shadow-[0_12px_30px_rgba(0,62,71,0.25)]"
           >
             Get A Quote <ArrowRight size={16} />
           </Link>
@@ -122,14 +113,14 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute left-4 right-4 top-24 z-50 rounded-2xl bg-white p-4 shadow-xl lg:hidden"
+            className="absolute left-3 right-3 top-20 z-50 max-h-[calc(100vh-5.5rem)] overflow-y-auto rounded-2xl bg-white p-4 shadow-xl sm:left-4 sm:right-4 lg:hidden"
           >
             <div className="flex flex-col gap-2">
               {navItems.map((item) => (
                 <div key={item.label} className="flex flex-col">
                   <Link 
                     href={item.href} 
-                    className="flex items-center justify-between rounded-lg px-4 py-3 text-base font-medium text-slate-800 hover:bg-slate-50" 
+                    className="flex items-center justify-between rounded-lg px-4 py-3 text-sm font-medium text-slate-800 hover:bg-slate-50" 
                     onClick={() => !item.dropdown && setOpen(false)}
                   >
                     {item.label}
@@ -141,7 +132,7 @@ export default function Navbar() {
                         <Link
                           key={dropItem.label}
                           href={dropItem.href}
-                          className="block rounded-lg py-2 text-sm font-medium text-slate-500 hover:text-red-600"
+                            className="block rounded-lg py-2 text-sm font-medium text-slate-500 hover:text-primary"
                           onClick={() => setOpen(false)}
                         >
                           {dropItem.label}
@@ -153,7 +144,7 @@ export default function Navbar() {
               ))}
               <Link 
                 href="/quote" 
-                className="mt-4 flex justify-center rounded-xl bg-red-600 px-6 py-3 text-sm font-semibold text-white"
+                className="mt-4 flex justify-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white"
                 onClick={() => setOpen(false)}
               >
                 Get A Quote

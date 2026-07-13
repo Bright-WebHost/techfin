@@ -51,11 +51,11 @@ const marqueeRow2 = [...clientList.slice(6, 12), ...clientList.slice(6, 12), ...
 
 export default function EditorialClientsSection() {
   return (
-    <section className="bg-white py-24 sm:py-32">
+    <section className="bg-white py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* --- HEADER --- */}
-        <div className="mb-12 border-b border-slate-300 pb-12 md:flex md:items-end md:justify-between">
+        <div className="mb-10 border-b border-slate-300 pb-8 md:flex md:items-end md:justify-between md:pb-12">
           <div className="max-w-3xl">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -70,9 +70,9 @@ export default function EditorialClientsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="mt-4 text-5xl font-black uppercase tracking-tighter text-slate-900 sm:text-6xl md:text-7xl"
+              className="mt-4 text-3xl font-black uppercase tracking-tighter text-slate-900 sm:text-5xl md:text-7xl"
             >
-              Trusted by <span className="text-red-600">Leaders.</span>
+              Trusted by <span className="text-primary">Leaders.</span>
             </motion.h2>
           </div>
         </div>
@@ -84,27 +84,27 @@ export default function EditorialClientsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           // Using a 1px gap with a background color creates sharp, hairline grid borders
-          className="mb-24 grid gap-[1px] border border-slate-300 bg-slate-300 md:grid-cols-3"
+          className="mb-16 grid gap-[1px] border border-slate-300 bg-slate-300 md:grid-cols-3"
         >
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className={`group flex flex-col justify-between bg-white p-8 transition-colors duration-300 hover:bg-slate-900 hover:text-white sm:p-10 ${testimonial.colSpan}`}
+              className={`group flex flex-col justify-between bg-white p-6 transition-colors duration-300 hover:bg-slate-900 hover:text-white sm:p-8 md:p-10 ${testimonial.colSpan}`}
             >
               <div>
                 <Quote 
-                  className="mb-8 h-8 w-8 text-red-500 transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-110" 
+                  className="mb-8 h-8 w-8 text-primary transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-110" 
                   strokeWidth={2} 
                 />
-                <p className={`font-medium leading-relaxed ${testimonial.colSpan === 'md:col-span-2' ? 'text-xl sm:text-3xl' : 'text-lg sm:text-xl'} text-slate-700 transition-colors group-hover:text-white`}>
+                <p className={`font-medium leading-relaxed ${testimonial.colSpan === 'md:col-span-2' ? 'text-lg sm:text-xl md:text-3xl' : 'text-base sm:text-lg md:text-xl'} text-slate-700 transition-colors group-hover:text-white`}>
                   "{testimonial.quote}"
                 </p>
               </div>
-              <div className="mt-12">
+              <div className="mt-10 sm:mt-12">
                 <p className="font-mono text-sm font-bold uppercase tracking-wider text-slate-900 transition-colors group-hover:text-white">
                   {testimonial.entity}
                 </p>
-                <p className="mt-1 font-mono text-xs uppercase tracking-widest text-red-600">
+                <p className="mt-1 font-mono text-xs uppercase tracking-widest text-primary">
                   {testimonial.role}
                 </p>
               </div>
@@ -116,8 +116,8 @@ export default function EditorialClientsSection() {
         <div className="grid gap-[1px] border border-slate-300 bg-slate-300 lg:grid-cols-3">
           
           {/* Summary Box */}
-          <div className="flex flex-col justify-center bg-white p-10 lg:col-span-1 lg:p-12">
-            <h3 className="mb-4 text-3xl font-black uppercase tracking-tighter text-slate-900">
+          <div className="flex flex-col justify-center bg-white p-6 sm:p-10 lg:col-span-1 lg:p-12">
+            <h3 className="mb-4 text-2xl font-black uppercase tracking-tighter text-slate-900 sm:text-3xl">
               Our Portfolio
             </h3>
             <p className="text-base font-medium leading-relaxed text-slate-600">
@@ -126,21 +126,21 @@ export default function EditorialClientsSection() {
           </div>
 
           {/* Marquee Box */}
-          <div className="flex flex-col justify-center gap-6 overflow-hidden bg-slate-50 py-12 lg:col-span-2">
+          <div className="flex flex-col justify-center gap-4 overflow-hidden bg-slate-50 py-8 sm:gap-6 sm:py-12 lg:col-span-2">
             
             {/* Row 1: Scrolling Left */}
             <div className="flex overflow-hidden">
               <motion.div
                 animate={{ x: [0, -1500] }}
                 transition={{ ease: "linear", duration: 25, repeat: Infinity }}
-                className="flex w-max items-center gap-8 whitespace-nowrap pl-8"
+                className="flex w-max items-center gap-5 whitespace-nowrap pl-4 sm:gap-8 sm:pl-8"
               >
                 {marqueeRow1.map((client, idx) => (
-                  <div key={`r1-${idx}`} className="flex items-center gap-8">
-                    <span className="font-mono text-xl font-bold uppercase text-slate-900 transition-colors hover:text-red-600">
+                  <div key={`r1-${idx}`} className="flex items-center gap-5 sm:gap-8">
+                    <span className="font-mono text-lg font-bold uppercase text-slate-900 transition-colors hover:text-primary sm:text-xl">
                       {client}
                     </span>
-                    <span className="h-1.5 w-1.5 rounded-full bg-red-600" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary" />
                   </div>
                 ))}
               </motion.div>
@@ -151,14 +151,14 @@ export default function EditorialClientsSection() {
               <motion.div
                 animate={{ x: [-1500, 0] }}
                 transition={{ ease: "linear", duration: 30, repeat: Infinity }}
-                className="flex w-max items-center gap-8 whitespace-nowrap pl-8"
+                className="flex w-max items-center gap-5 whitespace-nowrap pl-4 sm:gap-8 sm:pl-8"
               >
                 {marqueeRow2.map((client, idx) => (
-                  <div key={`r2-${idx}`} className="flex items-center gap-8">
-                    <span className="font-mono text-xl font-bold uppercase text-slate-400 transition-colors hover:text-red-600">
+                  <div key={`r2-${idx}`} className="flex items-center gap-5 sm:gap-8">
+                    <span className="font-mono text-lg font-bold uppercase text-slate-400 transition-colors hover:text-primary sm:text-xl">
                       {client}
                     </span>
-                    <span className="text-red-600">/</span>
+                    <span className="text-primary">/</span>
                   </div>
                 ))}
               </motion.div>

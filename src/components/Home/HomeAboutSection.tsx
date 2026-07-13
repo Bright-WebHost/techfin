@@ -28,9 +28,9 @@ const scaleIn = {
 
 export default function HomeAboutSection() {
   return (
-    <section className="overflow-hidden bg-white py-20 sm:py-24">
+    <section className="overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
           
           {/* Left Column: Overlapping Images & Badge */}
           <motion.div 
@@ -38,7 +38,7 @@ export default function HomeAboutSection() {
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="relative h-[500px] w-full sm:h-[520px] lg:h-[560px]"
+            className="relative h-[380px] w-full sm:h-[500px] lg:h-[560px]"
           >
             {/* Top Left Image */}
             <motion.div variants={scaleIn} className="absolute left-0 top-0 z-0 h-[65%] w-[75%]">
@@ -67,9 +67,9 @@ export default function HomeAboutSection() {
             {/* Rotating Circular Badge */}
             <motion.div 
               variants={fadeUp}
-              className="absolute left-[15%] top-[55%] z-20 -translate-y-1/2 rounded-full bg-white p-2 shadow-xl sm:left-[20%]"
+              className="absolute left-[8%] top-[58%] z-20 -translate-y-1/2 rounded-full bg-white p-2 shadow-xl sm:left-[20%]"
             >
-              <div className="relative flex h-32 w-32 items-center justify-center sm:h-40 sm:w-40">
+              <div className="relative flex h-28 w-28 items-center justify-center sm:h-40 sm:w-40">
                 {/* SVG for Circular Text */}
                 <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full animate-[spin_10s_linear_infinite]">
                   <path
@@ -88,7 +88,7 @@ export default function HomeAboutSection() {
                   </text>
                 </svg>
                 {/* Center Icon */}
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-red-600 text-white shadow-inner sm:h-16 sm:w-16">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-inner sm:h-16 sm:w-16">
                   <Shield size={28} />
                 </div>
               </div>
@@ -106,22 +106,22 @@ export default function HomeAboutSection() {
             {/* Header Section */}
             <div>
               <motion.div variants={fadeUp} className="mb-4 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-slate-600">
-                <Cctv size={20} className="text-red-600" /> 
+                <Cctv size={20} className="text-primary" /> 
                 About Us
               </motion.div>
               
-              <motion.h2 variants={fadeUp} className="text-4xl font-extrabold leading-[1.15] text-slate-900 sm:text-5xl">
+              <motion.h2 variants={fadeUp} className="text-3xl font-extrabold leading-[1.15] text-slate-900 sm:text-4xl lg:text-5xl">
                 Building secure homes and businesses across coastal Karnataka.
               </motion.h2>
               
-              <motion.p variants={fadeUp} className="mt-6 text-lg leading-relaxed text-slate-500">
+              <motion.p variants={fadeUp} className="mt-5 text-base leading-relaxed text-slate-500 sm:mt-6 sm:text-lg">
                 TechFin is a Mangalore-based distributor and systems integrator for Securus CCTV and home automation solutions. We deliver practical security installations and service support in Mangalore, Udupi, Bangalore, Shimoga, Hubli, and Savannur.
               </motion.p>
             </div>
 
             {/* Middle Section: Small Image & Experience Text */}
-            <motion.div variants={fadeUp} className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
-              <div className="relative h-28 w-44 shrink-0 overflow-hidden rounded-[1.5rem]">
+            <motion.div variants={fadeUp} className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6">
+              <div className="relative h-28 w-full shrink-0 overflow-hidden rounded-[1.5rem] sm:w-44">
                 <Image 
                   src="/images/about3.jpg" 
                   alt="Technician looking at camera" 
@@ -130,20 +130,20 @@ export default function HomeAboutSection() {
                 />
               </div>
               <div className="flex items-start gap-4 sm:items-center">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-red-600 text-white shadow-lg">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-white shadow-lg">
                   <Award size={24} />
                 </div>
-                <h3 className="max-w-[200px] text-lg font-bold leading-snug text-slate-900">
+                <h3 className="max-w-[220px] text-base font-bold leading-snug text-slate-900 sm:text-lg">
                   15+ years of local security distribution and installation experience
                 </h3>
               </div>
             </motion.div>
 
             {/* Bottom Call Action Box */}
-            <motion.div variants={fadeUp} className="mt-4 rounded-[2rem] border border-slate-100 bg-white p-6 shadow-[0_20px_50px_rgba(0,0,0,0.05)] sm:p-8">
-              <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+            <motion.div variants={fadeUp} className="mt-4 rounded-[2rem] border border-slate-100 bg-white p-5 shadow-[0_20px_50px_rgba(0,0,0,0.05)] sm:p-8">
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
                 <div className="flex items-center gap-5">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-red-600 text-white shadow-lg shadow-red-600/30">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-[0_12px_30px_rgba(0,62,71,0.3)]">
                     <PhoneCall size={24} />
                   </div>
                   <div>
@@ -154,7 +154,7 @@ export default function HomeAboutSection() {
                 
                 <Link 
                   href="/about" 
-                  className="group flex items-center justify-center gap-2 rounded-full bg-red-600 px-8 py-4 text-sm font-bold text-white transition-all hover:bg-red-700 hover:shadow-lg hover:shadow-red-600/30"
+                  className="group flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-white transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-[0_12px_30px_rgba(0,62,71,0.25)] sm:w-auto"
                 >
                   More About 
                   <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
