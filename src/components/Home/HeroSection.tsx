@@ -101,12 +101,7 @@ export default function HeroSection() {
               Advanced Security <br /> Solutions For Every <br /> Space
             </motion.h1>
             
-            <motion.p 
-              variants={springReveal} 
-              className="mt-5 max-w-xl text-base leading-relaxed text-slate-300 sm:mt-6 sm:text-lg"
-            >
-              The best home security solution of 2024 combine AI-powered cameras, smart integration, and 24/7 monitoring for ultimate protection & convenience.
-            </motion.p>
+            {/* Hero description removed per request */}
             
             <motion.div 
               variants={springReveal} 
@@ -120,12 +115,7 @@ export default function HeroSection() {
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
               
-              <button className="group flex w-full items-center justify-center gap-4 text-base font-semibold text-white transition hover:text-primary sm:w-auto sm:justify-start">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/30 backdrop-blur-sm transition-all group-hover:scale-105 group-hover:bg-primary/20 group-hover:ring-primary sm:h-14 sm:w-14">
-                  <Play size={20} className="ml-1 text-primary" fill="currentColor" />
-                </div>
-                Watch Video
-              </button>
+              {/* Watch Video button removed per request */}
             </motion.div>
           </div>
 
