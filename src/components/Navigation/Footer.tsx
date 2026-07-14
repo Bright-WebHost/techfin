@@ -6,15 +6,15 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-slate-800 bg-slate-950 text-slate-400">
+    <footer className="border-t border-[#003e48] bg-[#004754] text-slate-400">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
         
         {/* Column 1: Brand & Logo */}
         <div className="space-y-4">
           <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-white p-1.5 shadow-md ring-1 ring-[#B8AD76]/40">
+            <div className="flex h-12 w-12 items-center justify-center ">
               <Image 
-                src="/images/logo.png" 
+                src="/logo.png" 
                 alt="TechFin Logo" 
                 width={48} 
                 height={48} 
