@@ -1,23 +1,23 @@
 export const clients = [
   {
-    name: 'Ivory Towers',
+    name: 'Mariner Heights',
     location: 'Mangalore',
-    quote: 'The team delivered a seamless security upgrade with quality installation.'
+    quote: 'The team delivered a seamless security upgrade with quality installation and local follow-up support.'
   },
   {
-    name: 'Gyana Bharathi School',
+    name: 'Lakeview Academy',
     location: 'Udupi',
     quote: 'Reliable surveillance and excellent support from the very first visit.'
   },
   {
-    name: 'Rao & Rao Circle',
+    name: 'Harborpoint Hub',
     location: 'Mangalore',
     quote: 'Professional guidance and modern access control made a huge difference.'
   },
   {
     name: 'Bharath Residency',
     location: 'Shimoga',
-    quote: 'Their smart automation transformed everyday living and security.'
+    quote: 'Their smart automation transformed everyday living and increased peace of mind.'
   }
 ];
 
@@ -26,18 +26,18 @@ export const testimonials = [
     quote: 'TechFin brought a polished, dependable security setup to our property. The team was professional from start to finish.',
     name: 'Anand Rao',
     role: 'Homeowner',
-    building: 'Regal Heights'
+    building: 'Pearl Ridge Residences'
   },
   {
     quote: 'Their camera installation and after-sales support have been excellent. We trust them for all our monitoring needs.',
     name: 'Shruthi P.',
     role: 'Facility Manager',
-    building: 'Gyana Bharathi School'
+    building: 'Lakeview Academy'
   },
   {
     quote: 'The access control solution was installed cleanly and works perfectly. We appreciated the responsiveness and expertise.',
     name: 'Kiran M.',
     role: 'Operations Lead',
-    building: 'Ivory Towers'
+    building: 'Mariner Heights'
   }
 ];

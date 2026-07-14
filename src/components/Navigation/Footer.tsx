@@ -1,42 +1,111 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, ShieldCheck } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="border-t border-slate-200 bg-lightGray">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-4 lg:px-8">
-        <div>
-          <div className="mb-4 flex items-center gap-3">
-            <div className="rounded-full bg-primary/10 p-2 text-primary">
-              <ShieldCheck size={20} />
+    <footer className="border-t border-slate-800 bg-slate-950 text-slate-400">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
+        
+        {/* Column 1: Brand & Logo */}
+        <div className="space-y-4">
+          <div className="flex items-center gap-3">
+            <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-white p-1.5 shadow-md ring-1 ring-[#B8AD76]/40">
+              <Image 
+                src="/images/logo.png" 
+                alt="TechFin Logo" 
+                width={48} 
+                height={48} 
+                className="h-full w-full object-contain" 
+              />
             </div>
-            <p className="text-lg font-semibold text-navy">TechFin</p>
+            <span className="text-xl font-bold tracking-tight text-white">TechFin</span>
           </div>
-          <p className="text-sm leading-7 text-textLight">Trusted security solutions with over 15 years of experience across Mangalore and surrounding regions.</p>
+          <p className="text-sm leading-relaxed text-slate-400">
+            Trusted security solutions, intelligent access control, and advanced home automation with over 15 years of experience across Mangaluru and surrounding regions.
+          </p>
         </div>
+
+        {/* Column 2: Quick Links */}
         <div>
-          <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-navy">Quick Links</h3>
-          <ul className="space-y-2 text-sm text-textLight">
-            <li><Link href="/about" className="hover:text-primary">About</Link></li>
-            <li><Link href="/services" className="hover:text-primary">Services</Link></li>
-            <li><Link href="/contact" className="hover:text-primary">Contact</Link></li>
+          <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-[#B8AD76]">
+            Quick Links
+          </h3>
+          <ul className="space-y-2.5 text-sm">
+            <li>
+              <Link href="/about" className="transition-colors hover:text-[#B8AD76]">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" className="transition-colors hover:text-[#B8AD76]">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="transition-colors hover:text-[#B8AD76]">
+                Contact Support
+              </Link>
+            </li>
           </ul>
         </div>
+
+        {/* Column 3: Services */}
         <div>
-          <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-navy">Services</h3>
-          <ul className="space-y-2 text-sm text-textLight">
-            <li>Home Automation</li>
-            <li>CCTV Surveillance</li>
-            <li>Access Control</li>
+          <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-[#B8AD76]">
+            Services
+          </h3>
+          <ul className="space-y-2.5 text-sm text-slate-300">
+            <li className="flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#B8AD76]" />
+              <span>Home Automation</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#B8AD76]" />
+              <span>CCTV Surveillance</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#B8AD76]" />
+              <span>Access Control</span>
+            </li>
           </ul>
         </div>
+
+        {/* Column 4: Contact Details */}
         <div>
-          <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-navy">Contact</h3>
-          <ul className="space-y-3 text-sm text-textLight">
-            <li className="flex items-start gap-2"><MapPin size={16} className="mt-1 text-primary" /> <span>20-3-253/72, Regal Plaza, Mangalore</span></li>
-            <li className="flex items-center gap-2"><Phone size={16} className="text-primary" /> <span>8147989035</span></li>
-            <li className="flex items-center gap-2"><Mail size={16} className="text-primary" /> <span>excelenterprisesmangalore@gmail.com</span></li>
+          <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-[#B8AD76]">
+            Contact Us
+          </h3>
+          <ul className="space-y-3.5 text-sm text-slate-300">
+            <li className="flex items-start gap-3">
+              <MapPin size={18} className="mt-0.5 shrink-0 text-[#B8AD76]" />
+              <span className="text-slate-400">
+                20-3-253/72, Regal Plaza, 2nd Floor, Near Rao & Rao Circle, Mangaluru - 575001
+              </span>
+            </li>
+            <li className="flex items-center gap-3">
+              <Phone size={18} className="shrink-0 text-[#B8AD76]" />
+              <span>+91 81479 89035</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <Mail size={18} className="shrink-0 text-[#B8AD76]" />
+              <span>info@techfin.com</span>
+            </li>
           </ul>
+        </div>
+
+      </div>
+
+      {/* Bottom Copyright Bar */}
+      <div className="border-t border-slate-900 bg-slate-950/50 py-6">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 text-xs text-slate-500 sm:flex-row sm:px-6 lg:px-8">
+          <p>© {currentYear} TechFin Security Systems. All rights reserved.</p>
+          <div className="flex gap-6">
+            <span className="cursor-pointer transition-colors hover:text-slate-400">Privacy Policy</span>
+            <span className="cursor-pointer transition-colors hover:text-slate-400">Terms of Service</span>
+          </div>
         </div>
       </div>
     </footer>

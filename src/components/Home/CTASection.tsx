@@ -45,7 +45,7 @@ export default function CTASection() {
               
               {/* Email Us Button */}
               <a 
-                href="mailto:excelenterprisesmangalore@gmail.com" 
+                href="mailto:info@techfin.com" 
                 className="group inline-flex w-full items-center justify-center gap-3 border-2 border-slate-300 bg-white px-8 py-4 text-sm font-bold uppercase tracking-widest text-slate-900 transition-all duration-300 hover:border-slate-900 sm:w-auto"
               >
                 <Mail size={18} />

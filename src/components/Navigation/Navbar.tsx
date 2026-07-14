@@ -93,7 +93,7 @@ export default function Navbar() {
         {/* CTA Button */}
         <div className="hidden lg:block">
           <Link 
-            href="/quote" 
+            href="/contact" 
             className="flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary/90 hover:shadow-[0_12px_30px_rgba(0,62,71,0.25)]"
           >
             Get A Quote <ArrowRight size={16} />
@@ -143,7 +143,7 @@ export default function Navbar() {
                 </div>
               ))}
               <Link 
-                href="/quote" 
+                href="/contact" 
                 className="mt-4 flex justify-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white"
                 onClick={() => setOpen(false)}
               >

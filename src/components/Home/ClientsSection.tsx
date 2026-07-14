@@ -7,42 +7,42 @@ import { Quote } from 'lucide-react';
 // --- EXACT DATA FROM PDF ---
 const testimonials = [
   {
-    quote: "The camera installation at our apartment was seamless and professional. The Securus system has given our residents a real sense of security. Thank you, Excel Enterprises!",
+    quote: "The camera installation at our apartment was seamless and professional. The Securus system has given our residents a real sense of security. Thank you, TechFin!",
     role: "President",
-    entity: "Evergreen Apartment",
+    entity: "Coastal View Residences",
     colSpan: "md:col-span-2" // Takes up two columns for asymmetry
   },
   {
-    quote: "We had over 150 cameras installed at Ivory Towers and the entire process was handled with great coordination. The clarity, coverage, and support have exceeded our expectations.",
+    quote: "We had over 150 cameras installed at Mariner Heights and the entire process was handled with great coordination. The clarity, coverage, and support have exceeded our expectations.",
     role: "Facility Manager",
-    entity: "Ivory Towers",
+    entity: "Mariner Heights",
     colSpan: "md:col-span-1"
   },
   {
-    quote: "Excel Enterprises helped us secure our school premises with top-notch surveillance. Their team guided us with the best camera placements and ensured zero blind spots.",
+    quote: "TechFin helped us secure our school campus with top-notch surveillance. Their team guided us with the best camera placements and ensured zero blind spots.",
     role: "Principal",
-    entity: "Gyana Bharathi School",
+    entity: "Lakeview Academy",
     colSpan: "md:col-span-1"
   },
   {
-    quote: "The PTZ and ANPR cameras installed at the bus stand have greatly improved our monitoring and security. We're very happy with the service provided.",
+    quote: "The PTZ and ANPR cameras installed at the city depot have greatly improved our monitoring and security. We're very happy with the service provided.",
     role: "Project Coordinator",
-    entity: "Uppinangady Bus Stand",
+    entity: "City Central Depot",
     colSpan: "md:col-span-1"
   },
   {
     quote: "From consultation to installation, everything was smooth. The wireless Securus cameras are perfect for our commercial store. After-sales support has also been excellent.",
-    role: "Management",
-    entity: "Azad Hardware",
+    role: "Operations Head",
+    entity: "Harborpoint Hardware",
     colSpan: "md:col-span-1"
   }
 ];
 
 const clientList = [
-  "Sagar Auditorium", "Ivory Towers", "HM Auditorium", 
-  "Azad Hardware", "Greek Apartment", "Presidency Apartment", 
-  "Evergreen Apartment", "White Stone Apartment", "As-Suffah Foundation", 
-  "Gyana Bharathi School", "Uppinangady Bus Stand", "Mangalore City Surveillance"
+  "Seaside Auditorium", "Mariner Heights", "Harborview Arena", 
+  "Harborpoint Hardware", "Pearl Ridge Apartments", "Beacon Heights", 
+  "Coastal View Residences", "Whitecliff Residences", "Samudra Trust", 
+  "Lakeview Academy", "City Central Depot", "Mangalore Transit Security"
 ];
 
 // Split the list in half for the dual-direction marquees
@@ -84,7 +84,7 @@ export default function EditorialClientsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           // Using a 1px gap with a background color creates sharp, hairline grid borders
-          className="mb-16 grid gap-[1px] border border-slate-300 bg-slate-300 md:grid-cols-3"
+          className="mb-16 grid grid-cols-1 gap-[1px] border border-slate-300 bg-slate-300 sm:grid-cols-2 md:grid-cols-3"
         >
           {testimonials.map((testimonial, index) => (
             <div 
