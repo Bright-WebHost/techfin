@@ -287,7 +287,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-mono text-xs text-slate-400 uppercase tracking-wider mb-1">Electronic Mail</h4>
-                      <p className="font-mono text-slate-200">info@techfin.com</p>
+                      <p className="font-mono text-slate-200">excelenterprisesmangalore@gmail.com</p>
                     </div>
                   </div>
                 </div>

@@ -12,7 +12,7 @@ export default function CTASection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative border border-slate-200 bg-[#f8f9fa] p-6 sm:p-10 lg:p-20"
+          className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-[#f8f9fa] p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)] sm:p-10 lg:p-20"
         >
           {/* Subtle sharp accent line on the left */}
           <div className="absolute bottom-0 left-0 top-0 w-1.5 bg-primary sm:w-2" />
@@ -24,7 +24,7 @@ export default function CTASection() {
               <p className="mb-4 font-mono text-sm font-bold uppercase tracking-[0.2em] text-primary">
                 Ready to secure your space?
               </p>
-              <h2 className="text-3xl font-black uppercase tracking-tighter text-slate-900 sm:text-4xl lg:text-6xl">
+              <h2 className="text-[2rem] font-black uppercase tracking-tighter text-slate-900 sm:text-4xl lg:text-6xl">
                 Let’s build a safer, smarter property together.
               </h2>
               <p className="mt-5 text-base font-medium leading-relaxed text-slate-600 sm:mt-6 sm:text-lg">
@@ -33,7 +33,7 @@ export default function CTASection() {
             </div>
             
             {/* Right Content: Action Buttons */}
-            <div className="flex shrink-0 flex-col gap-4 sm:flex-row">
+            <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
               {/* Call Now Button */}
               <a 
                 href="/contact" 
@@ -45,7 +45,7 @@ export default function CTASection() {
               
               {/* Email Us Button */}
               <a 
-                href="mailto:info@techfin.com" 
+                href="mailto:excelenterprisesmangalore@gmail.com" 
                 className="group inline-flex w-full items-center justify-center gap-3 border-2 border-slate-300 bg-white px-8 py-4 text-sm font-bold uppercase tracking-widest text-slate-900 transition-all duration-300 hover:border-slate-900 sm:w-auto"
               >
                 <Mail size={18} />

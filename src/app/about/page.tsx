@@ -580,7 +580,7 @@ export default function BrightAwwwardsAbout() {
               </a>
 
               <a
-                href="mailto:info@techfin.com"
+                href="mailto:excelenterprisesmangalore@gmail.com"
                 className={`${mono.className} group inline-flex items-center justify-center gap-3 rounded-full border-2 border-slate-200 bg-white px-10 py-5 text-sm font-bold uppercase tracking-widest text-[#0B0F0D] shadow-sm transition-all hover:border-[#0B0F0D] hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8AD76] focus-visible:ring-offset-2`}
               >
                 Email Us
