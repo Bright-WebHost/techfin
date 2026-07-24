@@ -78,12 +78,6 @@ export default function ModernProductsPage() {
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-3xl"
           >
-            {/* Telemetry Micro-Label */}
-            <div className="mb-4 flex items-center justify-center gap-2 text-[11px] font-mono tracking-[0.2em] text-[#B8AD76] uppercase">
-              <Activity size={14} className="animate-pulse" />
-              <span>SYS.CATALOG // PROTOCOL 2026.MNG</span>
-            </div>
-
             {/* Badge */}
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#B8AD76]/30 bg-[#B8AD76]/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-slate-700 shadow-sm backdrop-blur-md">
               <ShieldCheck size={16} className="text-[#B8AD76]" />

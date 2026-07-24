@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navigation/Navbar';
 import Footer from '@/components/Navigation/Footer';
+import FloatingWhatsApp from '@/components/Navigation/FloatingWhatsApp';
 
 export const metadata: Metadata = {
   title: 'TechFin | Security Solutions',
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         {children}
         <Footer />
+        <FloatingWhatsApp />
       </body>
     </html>
   );

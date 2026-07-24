@@ -32,12 +32,11 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   return (
-    // Changed "absolute" to "fixed" here to make the navbar sticky
-    <header className="fixed left-0 right-0 top-0 z-50 px-3 pt-4 sm:px-6 sm:pt-6 lg:px-8">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full bg-white px-4 py-3 shadow-xl transition-all sm:px-6">
+    <header className="fixed left-0 right-0 top-0 z-50 px-2 pt-3 sm:px-6 sm:pt-6 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-slate-200/80 bg-white/95 px-3 py-2.5 shadow-[0_10px_35px_rgba(15,23,42,0.12)] backdrop-blur sm:px-6 sm:py-3">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/images/logo.png" alt="TechFin Enterprises" width={176} height={72} className="h-11 w-auto sm:h-12" priority />
+          <Image src="/images/logo.png" alt="TechFin Enterprises" width={176} height={72} className="h-9 w-auto sm:h-12" priority />
         </Link>
 
         {/* Desktop Links */}
@@ -67,6 +66,7 @@ export default function Navbar() {
                 <AnimatePresence>
                   {activeDropdown === item.label && (
                     <motion.div
+                      key={`dropdown-${item.label}`}
                       initial={{ opacity: 0, y: 10, scale: 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
@@ -101,8 +101,8 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="p-2 text-slate-900 lg:hidden" onClick={() => setOpen(!open)}>
-          {open ? <X size={24} /> : <Menu size={24} />}
+        <button className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-900/5 p-2 text-slate-900 transition hover:bg-slate-900 hover:text-white lg:hidden" onClick={() => setOpen(!open)}>
+          {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </nav>
 
@@ -110,10 +110,11 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div 
+            key="mobile-menu"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute left-3 right-3 top-20 z-50 max-h-[calc(100vh-5.5rem)] overflow-y-auto rounded-2xl bg-white p-4 shadow-xl sm:left-4 sm:right-4 lg:hidden"
+            className="absolute left-2 right-2 top-16 z-50 max-h-[calc(100vh-5.5rem)] overflow-y-auto rounded-[1.5rem] border border-slate-200/80 bg-white p-4 shadow-[0_18px_45px_rgba(15,23,42,0.16)] sm:left-4 sm:right-4 lg:hidden"
           >
             <div className="flex flex-col gap-2">
               {navItems.map((item) => (
@@ -144,7 +145,7 @@ export default function Navbar() {
               ))}
               <Link 
                 href="/contact" 
-                className="mt-4 flex justify-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white"
+                className="mt-4 flex justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(0,62,71,0.2)]"
                 onClick={() => setOpen(false)}
               >
                 Get A Quote

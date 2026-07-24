@@ -54,7 +54,7 @@ export default function WhyChooseUs() {
           </p>
 
           {/* Feature List */}
-          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="mt-8 flex flex-col gap-2 sm:grid sm:grid-cols-2 sm:gap-4">
             {features.map((item, index) => (
               <motion.div 
                 key={item.title}
@@ -62,20 +62,20 @@ export default function WhyChooseUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm transition-all duration-300 hover:border-[#B8AD76]/50 hover:shadow-md"
+                className="group relative overflow-hidden rounded-xl sm:rounded-2xl border border-slate-200/80 bg-white p-3 sm:p-5 shadow-sm transition-all duration-300 hover:border-[#B8AD76]/50 hover:shadow-md"
               >
                 {/* Champagne Gold Accent Bar on Hover */}
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-transparent transition-colors duration-300 group-hover:bg-[#B8AD76]" />
                 
-                <div className="flex items-start gap-3.5">
-                  <div className="rounded-xl bg-[#B8AD76]/10 p-2.5 text-[#B8AD76] ring-1 ring-[#B8AD76]/20 shrink-0 mt-0.5">
-                    <BadgeCheck size={20} />
+                <div className="flex items-start gap-2.5 sm:gap-3.5">
+                  <div className="rounded-lg sm:rounded-xl bg-[#B8AD76]/10 p-1.5 sm:p-2.5 text-[#B8AD76] ring-1 ring-[#B8AD76]/20 shrink-0 mt-0.5">
+                    <BadgeCheck size={18} className="sm:w-5 sm:h-5" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-slate-900 text-base group-hover:text-[#B8AD76] transition-colors">
+                  <div className="min-w-0">
+                    <h3 className="font-semibold text-slate-900 text-sm sm:text-base group-hover:text-[#B8AD76] transition-colors">
                       {item.title}
                     </h3>
-                    <p className="mt-1 text-xs leading-relaxed text-slate-500 font-light">
+                    <p className="mt-1 text-xs leading-relaxed text-slate-500 font-light hidden sm:block">
                       {item.desc}
                     </p>
                   </div>

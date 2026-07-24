@@ -28,7 +28,7 @@ export default function HomeAboutSection() {
             whileInView="show"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="relative h-[450px] sm:h-[550px]"
+            className="relative h-[340px] sm:h-[520px]"
           >
             <motion.div variants={fadeUp} className="absolute left-0 top-0 z-0 h-[70%] w-[80%] overflow-hidden rounded-[2.5rem] bg-slate-100">
               <Image src="/images/about1.jpg" alt="Security installation" fill className="object-cover" />
@@ -61,30 +61,30 @@ export default function HomeAboutSection() {
               <motion.div variants={fadeUp} className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#B8AD76]">
                 <Info size={16} /> About TechFin
               </motion.div>
-              <motion.h2 variants={fadeUp} className="text-4xl font-black uppercase tracking-tight text-slate-900 lg:text-5xl">
+              <motion.h2 variants={fadeUp} className="text-[2rem] font-black uppercase tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
                 Securing Coastline <span className="text-[#B8AD76]">Infrastructure</span>
               </motion.h2>
-              <motion.p variants={fadeUp} className="mt-6 text-lg leading-relaxed text-slate-600">
+              <motion.p variants={fadeUp} className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
                 Based in Mangaluru, TechFin is the region’s premier integrator for Securus CCTV and smart automation. We bring enterprise-grade security to your home and business, ensuring seamless protection from Mangaluru to Hubli.
               </motion.p>
             </div>
 
-            <motion.div variants={fadeUp} className="flex items-center gap-6 rounded-[2rem] border border-slate-100 bg-slate-50 p-6">
+            <motion.div variants={fadeUp} className="flex items-center gap-4 rounded-[1.75rem] border border-slate-100 bg-slate-50 p-5 sm:gap-6 sm:p-6">
               <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#B8AD76] text-white">
                 <Award size={28} />
               </div>
-              <h3 className="text-lg font-bold text-slate-900">15+ Years of local distribution and professional installation expertise.</h3>
+              <h3 className="text-base font-bold text-slate-900 sm:text-lg">15+ Years of local distribution and professional installation expertise.</h3>
             </motion.div>
 
-            <motion.div variants={fadeUp} className="rounded-[2rem] bg-slate-900 p-8 shadow-2xl">
+            <motion.div variants={fadeUp} className="rounded-[1.75rem] bg-slate-900 p-6 shadow-2xl sm:p-8">
               <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-center gap-4">
                   <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#B8AD76]/20 text-[#B8AD76]">
                     <PhoneCall size={24} />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs font-bold uppercase tracking-widest text-slate-400">Emergency Support</p>
-                    <p className="text-2xl font-black text-white">+91 81479 89035</p>
+                    <p className="whitespace-nowrap text-xl font-black text-white sm:text-2xl">+91 81479 89035</p>
                   </div>
                 </div>
                 <Link href="/about" className="flex items-center justify-center gap-2 rounded-full bg-[#B8AD76] px-8 py-4 text-sm font-bold text-slate-900 transition-all hover:bg-white">

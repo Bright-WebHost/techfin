@@ -59,12 +59,6 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-3xl"
           >
-            {/* Telemetry Micro-Label */}
-            <div className="mb-4 flex items-center justify-center gap-2 text-[11px] font-mono tracking-[0.2em] text-[#B8AD76] uppercase">
-              <Activity size={14} className="animate-pulse" />
-              <span>COMM.CHANNEL // SECURE PROTOCOL</span>
-            </div>
-
             {/* Badge */}
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#B8AD76]/30 bg-[#B8AD76]/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-slate-700 shadow-sm backdrop-blur-md">
               <ShieldCheck size={16} className="text-[#B8AD76]" />
@@ -103,10 +97,6 @@ export default function ContactPage() {
               
               <div className="flex items-center justify-between border-b border-slate-100 pb-6">
                 <div>
-                  <div className="flex items-center gap-2 text-[11px] font-mono text-[#B8AD76] uppercase tracking-wider">
-                    <Terminal size={14} />
-                    <span>Input Portal</span>
-                  </div>
                   <h2 className="text-2xl font-bold tracking-tight text-slate-900 mt-1">
                     Send a Message
                   </h2>
@@ -205,16 +195,13 @@ export default function ContactPage() {
                       Transmit Request
                     </span>
                   </button>
-
-                  <span className="hidden sm:inline text-[10px] font-mono text-slate-400 uppercase tracking-widest">
-                    ENCRYPTION: 256-BIT
-                  </span>
                 </div>
 
                 {/* Submission Success State */}
                 <AnimatePresence>
                   {submitted && (
                     <motion.div 
+                      key="success-message"
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
@@ -285,9 +272,9 @@ export default function ContactPage() {
                     <div className="rounded-lg bg-[#B8AD76]/10 p-2.5 h-fit border border-[#B8AD76]/30 text-[#B8AD76]">
                       <Mail size={20} />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <h4 className="font-mono text-xs text-slate-400 uppercase tracking-wider mb-1">Electronic Mail</h4>
-                      <p className="font-mono text-slate-200">excelenterprisesmangalore@gmail.com</p>
+                      <p className="font-mono text-slate-200 break-all max-w-full">excelenterprisesmangalore@gmail.com</p>
                     </div>
                   </div>
                 </div>

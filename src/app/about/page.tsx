@@ -147,7 +147,7 @@ export default function BrightAwwwardsAbout() {
       {/* ========================================== */}
       {/* 1. HERO — locked-focus intro */}
       {/* ========================================== */}
-      <section className="relative min-h-[90vh] overflow-hidden pt-32 sm:pt-40">
+      <section className="relative min-h-[80vh] overflow-hidden pt-24 sm:pt-28">
         
         {/* Architectural Grid & Scanlines */}
         <GridPattern />
@@ -196,7 +196,7 @@ export default function BrightAwwwardsAbout() {
                 </p>
 
                 {/* Technical status bar under hero text */}
-                <div className={`${mono.className} mt-10 flex items-center gap-6 border-t border-slate-200 pt-6 text-xs text-slate-400`}>
+                <div className={`${mono.className} mt-6 flex items-center gap-6 border-t border-slate-200 pt-4 text-xs text-slate-400`}>
                   <div className="flex items-center gap-2">
                     <Radio size={14} className="text-emerald-500" />
                     <span>24/7 MONITORING READY</span>
@@ -283,7 +283,7 @@ export default function BrightAwwwardsAbout() {
       {/* ========================================== */}
       {/* 2. COVERAGE NODES — network-status strip */}
       {/* ========================================== */}
-      <div className="relative border-y border-slate-200/80 bg-slate-50 py-8">
+      <div className="relative border-y border-slate-200/80 bg-slate-50 py-5">
         {/* Subtle decorative background line */}
         <div className="absolute inset-y-0 left-1/2 w-px bg-slate-200" />
         
@@ -317,11 +317,11 @@ export default function BrightAwwwardsAbout() {
       {/* ========================================== */}
       {/* 3. STRENGTHS — focus-lock hover cards */}
       {/* ========================================== */}
-      <section className="relative bg-white py-32 overflow-hidden">
+      <section className="relative bg-white py-20 overflow-hidden">
         <GridPattern className="opacity-[0.08]" />
         
         <div className="relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
-          <div className="mb-20 flex flex-col items-center justify-between gap-6 md:flex-row md:items-end">
+          <div className="mb-10 flex flex-col items-center justify-between gap-6 md:flex-row md:items-end">
             <div>
               <div className={`${mono.className} mb-3 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#B8AD76]`}>
                 <CheckCircle2 size={14} /> CORE ADVANTAGES
@@ -384,7 +384,7 @@ export default function BrightAwwwardsAbout() {
       {/* ========================================== */}
       {/* 4. VISION & MISSION */}
       {/* ========================================== */}
-      <section className="relative bg-slate-50 py-32 border-t border-slate-200/80 overflow-hidden">
+      <section className="relative bg-slate-50 py-20 border-t border-slate-200/80 overflow-hidden">
         
         {/* Background decorative radar circles */}
         <div className="pointer-events-none absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full border border-slate-200/60" />
@@ -463,7 +463,7 @@ export default function BrightAwwwardsAbout() {
       {/* ========================================== */}
       {/* 5. TIMELINE — sequence of trust */}
       {/* ========================================== */}
-      <section className="relative bg-white py-32 overflow-hidden">
+      <section className="relative bg-white py-20 overflow-hidden">
         <GridPattern className="opacity-[0.05]" />
         
         <div className="relative z-10 mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
@@ -484,10 +484,6 @@ export default function BrightAwwwardsAbout() {
                   15+ years of building secure environments, adapting to modern technology, and keeping coastal Karnataka safe.
                 </p>
 
-                <div className={`${mono.className} mt-8 border-t border-slate-200 pt-6 text-xs text-slate-400 flex justify-between`}>
-                  <span>STATUS: ONGOING</span>
-                  <span>PHASE: 04 COMPLETE</span>
-                </div>
               </div>
             </div>
 
@@ -500,7 +496,7 @@ export default function BrightAwwwardsAbout() {
                     initial={shouldReduceMotion ? false : { opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-150px" }}
-                    className="group relative mb-16 rounded-[2rem] border border-transparent bg-white p-6 transition-all hover:border-slate-200 hover:bg-slate-50 hover:shadow-sm sm:p-8 last:mb-0"
+                    className="group relative mb-10 rounded-[2rem] border border-transparent bg-white p-6 transition-all hover:border-slate-200 hover:bg-slate-50 hover:shadow-sm sm:p-8 last:mb-0"
                   >
                     {/* Sensor-style pulsing dot */}
                     <motion.div
@@ -517,9 +513,6 @@ export default function BrightAwwwardsAbout() {
                     <div className="flex items-center justify-between">
                       <span className={`${mono.className} mb-3 inline-block rounded-md bg-slate-100 px-3 py-1 text-xs font-bold tracking-widest text-[#B8AD76] group-hover:bg-white`}>
                         {item.code}
-                      </span>
-                      <span className={`${mono.className} text-[10px] text-slate-300`}>
-                        LOG_ENTRY // 0{index + 1}
                       </span>
                     </div>
 
@@ -541,7 +534,7 @@ export default function BrightAwwwardsAbout() {
       {/* ========================================== */}
       {/* 6. CTA — viewfinder focus bookend */}
       {/* ========================================== */}
-      <section className="relative border-t border-slate-200/80 bg-white py-32 overflow-hidden">
+      <section className="relative border-t border-slate-200/80 bg-white py-20 overflow-hidden">
         
         {/* Background Radar Rings */}
         <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">

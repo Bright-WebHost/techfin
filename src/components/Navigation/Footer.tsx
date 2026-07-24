@@ -103,8 +103,14 @@ export default function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 text-xs text-slate-500 sm:flex-row sm:px-6 lg:px-8">
           <p>© {currentYear} TechFin Security Systems. All rights reserved.</p>
           <div className="flex gap-6">
-            <span className="cursor-pointer transition-colors hover:text-slate-400">Privacy Policy</span>
-            <span className="cursor-pointer transition-colors hover:text-slate-400">Terms of Service</span>
+            <a
+              href="https://brightmedia.tech/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-[#B8AD76]"
+            >
+              Developed by Bright Media
+            </a>
           </div>
         </div>
       </div>

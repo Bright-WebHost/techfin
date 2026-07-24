@@ -54,7 +54,7 @@ const imageReveal = {
 export default function HeroSection() {
   return (
     // Set root to white (or transparent if your page body is white) so the overlap is visible
-    <div className="bg-white pb-16 sm:pb-20"> 
+    <div className="bg-white pb-14 sm:pb-20"> 
       
       {/* 1. DARK HERO SECTION */}
       <div className="relative flex flex-col bg-slate-800 pb-20 sm:pb-24 lg:pb-32">
@@ -83,7 +83,7 @@ export default function HeroSection() {
           variants={staggerContainer}
           initial="hidden"
           animate="show"
-          className="relative z-10 mx-auto grid w-full max-w-7xl flex-1 grid-cols-1 items-center gap-8 px-4 pt-32 sm:gap-12 sm:px-6 sm:pt-36 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pt-40"
+          className="relative z-10 mx-auto grid w-full max-w-7xl flex-1 grid-cols-1 items-center gap-8 px-4 pt-28 sm:gap-12 sm:px-6 sm:pt-36 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pt-40"
         >
           {/* Left Column: Text & CTAs */}
           <div className="max-w-2xl">
@@ -96,7 +96,7 @@ export default function HeroSection() {
             
             <motion.h1 
               variants={springReveal} 
-              className="text-4xl font-extrabold uppercase leading-[1.08] text-white sm:text-5xl lg:text-[4.5rem]"
+              className="text-[2.2rem] font-extrabold uppercase leading-[1.05] text-white sm:text-5xl lg:text-[4.5rem]"
             >
               Advanced Security <br /> Solutions For Every <br /> Space
             </motion.h1>
@@ -105,11 +105,11 @@ export default function HeroSection() {
             
             <motion.div 
               variants={springReveal} 
-              className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6"
+              className="mt-7 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6"
             >
               <Link 
                 href="/contact" 
-                className="group flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-bold text-white transition-all hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(0,62,71,0.4)] sm:w-auto"
+                className="group flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 text-base font-bold text-white transition-all hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(0,62,71,0.4)] sm:w-auto"
               >
                 Get Started Now 
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
@@ -134,28 +134,24 @@ export default function HeroSection() {
         </motion.section>
       </div>
 
-      {/* 2. OVERLAPPING FEATURE CARD */}
-      {/* 
-        This is now completely outside the dark background wrapper. 
-        The negative top margin (-mt-24 / lg:-mt-28) pulls it up over the dark edge. 
-      */}
+    
       <div className="relative z-20 mx-auto -mt-16 w-full max-w-7xl px-4 sm:-mt-20 sm:px-6 lg:-mt-28 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
-          className="rounded-[2rem] bg-white p-5 shadow-[0_30px_60px_rgba(0,0,0,0.08)] sm:p-8 lg:w-4/5 lg:p-12"
+          className="rounded-[2rem] border border-slate-200/80 bg-white p-5 shadow-[0_30px_60px_rgba(0,0,0,0.08)] sm:p-8 lg:w-4/5 lg:p-12"
         >
-          <div className="grid grid-cols-1 gap-6 divide-y divide-slate-200/80 md:grid-cols-3 md:gap-0 md:divide-x md:divide-y-0 md:divide-slate-200/80">
+          <div className="grid grid-cols-3 gap-2 sm:gap-3 divide-x divide-slate-200/80 md:gap-0 md:divide-slate-200/80">
             {features.map((feature, idx) => (
               <div 
                 key={idx}
-                className="group flex flex-col px-0 py-5 first:pt-0 last:pb-0 md:px-4 md:py-0 md:first:pl-0 md:last:pr-0"
+                className="group flex flex-col items-center px-2 py-3 first:pl-0 last:pr-0 sm:py-4 md:items-start md:px-4 md:py-0 md:first:pl-0 md:last:pr-0"
               >
-                <div className="transition-transform duration-300 group-hover:-translate-y-1">
+                <div className="mb-2 transition-transform duration-300 group-hover:-translate-y-1 sm:mb-3">
                   {feature.icon}
                 </div>
-                <h3 className="whitespace-pre-line text-lg font-bold leading-tight text-slate-900 sm:text-xl">
+                <h3 className="whitespace-pre-line text-center text-xs font-bold leading-tight text-slate-900 sm:text-sm md:text-left md:text-lg lg:text-xl">
                   {feature.title}
                 </h3>
               </div>

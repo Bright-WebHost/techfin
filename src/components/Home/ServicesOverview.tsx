@@ -130,7 +130,7 @@ export default function AutoCarouselAndCards() {
             <span>OPTICAL SURVEILLANCE // ACTIVE MATRIX</span>
           </div>
           
-          <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
+          <h2 className="text-[2rem] font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
             Surveillance <span className="underline decoration-[#B8AD76]/40 decoration-wavy decoration-2 underline-offset-8">Cameras</span>
           </h2>
         </div>
@@ -148,7 +148,7 @@ export default function AutoCarouselAndCards() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.25 }}
-                className="overflow-hidden rounded-[2rem] bg-white shadow-xl ring-1 ring-slate-200"
+                className="overflow-hidden rounded-[1.75rem] bg-white shadow-[0_22px_55px_rgba(15,23,42,0.14)] ring-1 ring-slate-200"
               >
                 <div className="relative aspect-[4/5] w-full">
                   <Image
@@ -169,7 +169,7 @@ export default function AutoCarouselAndCards() {
                 </div>
               </motion.div>
 
-              <div className="mt-6 flex items-center justify-center gap-2">
+              <div className="mt-5 flex items-center justify-center gap-2">
                 {cameras.map((camera, index) => (
                   <button
                     key={camera.id}
@@ -289,11 +289,11 @@ export default function AutoCarouselAndCards() {
             </button>
           </div>
 
-          <div className="mb-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 pt-4">
+          <div className="mb-16 grid grid-cols-2 gap-5 sm:grid-cols-2 lg:grid-cols-4 pt-4">
             {services.map((service, idx) => (
               <motion.div
                 key={service.id}
-                className="group relative flex flex-col justify-between rounded-[2rem] border border-slate-200/80 bg-white p-6 pt-12 shadow-sm transition-all duration-300 hover:border-[#B8AD76]/50 hover:shadow-xl hover:shadow-[#B8AD76]/5 sm:p-8 sm:pt-14"
+                className="group relative flex flex-col justify-between rounded-[1.75rem] border border-slate-200/80 bg-white p-6 pt-12 shadow-sm transition-all duration-300 hover:border-[#B8AD76]/50 hover:shadow-xl hover:shadow-[#B8AD76]/5 sm:p-8 sm:pt-14"
                 initial={{ y: 24, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -343,7 +343,7 @@ export default function AutoCarouselAndCards() {
           {/* ======================================================== */}
           {/* SECTION 3: OPERATIONS FOOTER (COMMAND DECK CARDS)        */}
           {/* ======================================================== */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 pt-6">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 pt-6">
             
             {/* Card 1: Installation Deck */}
             <motion.div 
